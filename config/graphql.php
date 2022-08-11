@@ -75,7 +75,8 @@ return [
     'schemas' => [
         'default' => [
             'query' => [
-                // ExampleQuery::class,
+                //'QuestQuery' => \App\GraphQL\Queries\Quest\QuestQuery::class
+                // 'クエリ名' => \App\クエリの居所\クエリファイル内で定義しているclass名::class
             ],
             'mutation' => [
                 // ExampleMutation::class,
