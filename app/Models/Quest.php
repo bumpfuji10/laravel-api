@@ -10,10 +10,9 @@ class Quest extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'category_id', 'description', 'reward'];
+	protected $fillable = ['title', 'category_id', 'description', 							  'reward'];
 
-    public function category()
-    {
+    public function category(){
         return $this->belongsTo(Category::class);
     }
 }

@@ -1,6 +1,7 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
+
 
 return [
     'route' => [
@@ -15,7 +16,7 @@ return [
         // This middleware will apply to all schemas
         'middleware' => [],
 
-        // Additional route group attributes
+        // Additional route group attributesG
         //
         // Example:
         //
@@ -35,66 +36,20 @@ return [
         'enable' => true,
     ],
 
-    // The schemas for query and/or mutation. It expects an array of schemas to provide
-    // both the 'query' fields and the 'mutation' fields.
-    //
-    // You can also provide a middleware that will only apply to the given schema
-    //
-    // Example:
-    //
-    //  'schemas' => [
-    //      'default' => [
-    //          'controller' => MyController::class . '@method',
-    //          'query' => [
-    //              App\GraphQL\Queries\UsersQuery::class,
-    //          ],
-    //          'mutation' => [
-    //
-    //          ]
-    //      ],
-    //      'user' => [
-    //          'query' => [
-    //              App\GraphQL\Queries\ProfileQuery::class,
-    //          ],
-    //          'mutation' => [
-    //
-    //          ],
-    //          'middleware' => ['auth'],
-    //      ],
-    //      'user/me' => [
-    //          'query' => [
-    //              App\GraphQL\Queries\MyProfileQuery::class,
-    //          ],
-    //          'mutation' => [
-    //
-    //          ],
-    //          'middleware' => ['auth'],
-    //      ],
-    //  ]
-    //
     'schemas' => [
         'default' => [
             'query' => [
-                //'QuestQuery' => \App\GraphQL\Queries\Quest\QuestQuery::class
-                // 'クエリ名' => \App\クエリの居所\クエリファイル内で定義しているclass名::class
+                'QuestsQuery' => \App\GraphQL\Queries\Quest\QuestsQuery::class,
             ],
+
             'mutation' => [
-                // ExampleMutation::class,
             ],
-            // The types only available in this schema
+
             'types' => [
-                // ExampleType::class,
+                'Quest' => \App\GraphQL\Types\QuestType::class,
+                'Category' => \App\GraphQL\Types\CategoryType::class
             ],
-
-            // Laravel HTTP middleware
-            'middleware' => null,
-
-            // Which HTTP methods to support; must be given in UPPERCASE!
-            'method' => ['GET', 'POST'],
-
-            // An array of middlewares, overrides the global ones
-            'execution_middleware' => null,
-        ],
+        ]
     ],
 
     // The global types available to all schemas.
