@@ -46,7 +46,6 @@ return [
             ],
 
             'mutation' => [
-                'CreateCategoryMutation' => \App\GraphQL\Mutations\Category\CreateCategoryMutation::class,
             ],
 
             'types' => [
