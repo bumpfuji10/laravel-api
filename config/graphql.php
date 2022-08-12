@@ -46,6 +46,12 @@ return [
             ],
 
             'mutation' => [
+                'CreateQuest' => \App\GraphQL\Mutations\Quest\CreateQuestMutation::class,
+                'UpdateQuest' => \App\GraphQL\Mutations\Quest\UpdateQuestMutation::class,
+                'DeleteQuest' => \App\GraphQL\Mutations\Quest\DeleteQuestMutation::class,
+                'CreateCategory' => \App\GraphQL\Mutations\Category\CreateCategoryMutation::class,
+                'UpdateCategory' => \App\GraphQL\Mutations\Category\UpdateCategoryMutation::class,
+                'DeleteCategory' => \App\GraphQL\Mutations\Category\DeleteCategoryMutation::class,
             ],
 
             'types' => [
