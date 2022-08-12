@@ -1,1 +1,1 @@
-Laravel　✖️ GraphQL 練習用
+Laravel ✖️ GraphQL 練習用
