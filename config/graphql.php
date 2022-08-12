@@ -39,15 +39,19 @@ return [
     'schemas' => [
         'default' => [
             'query' => [
+                'CategoryQuery' => \App\GraphQL\Queries\Category\CategoryQuery::class,
+                'CategoriesQuery' => \App\GraphQL\Queries\Category\CategoriesQuery::class,
+                'QuestQuery' => \App\GraphQL\Queries\Quest\QuestQuery::class,
                 'QuestsQuery' => \App\GraphQL\Queries\Quest\QuestsQuery::class,
             ],
 
             'mutation' => [
+                'CreateCategoryMutation' => \App\GraphQL\Mutations\Category\CreateCategoryMutation::class,
             ],
 
             'types' => [
+                'Category' => \App\GraphQL\Types\CategoryType::class,
                 'Quest' => \App\GraphQL\Types\QuestType::class,
-                'Category' => \App\GraphQL\Types\CategoryType::class
             ],
         ]
     ],
